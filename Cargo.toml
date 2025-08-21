@@ -1,0 +1,10 @@
+[package]
+name = "simple-async-examples"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.47.1", features = ["full"] }
+rayon = { version = "1.11.0" }
+tracing =            { version = "0.1" }
+tracing-subscriber = { version = "0.3" }
