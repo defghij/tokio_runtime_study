@@ -274,8 +274,7 @@ mod runtime {
 
     pub fn multithreaded() -> tokio::runtime::Runtime {
         info!("Starting: create_runtime");
-        let runtime = tokio::runtime::Builder::new_multi_thread()
-            .worker_threads(2)
+        let runtime = tokio::runtime::Builder::new_current_thread()
             .thread_name("multi-threaded-runtime")
             .thread_stack_size(3 * 1024 * 1024)
             .enable_all()
